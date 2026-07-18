@@ -1,0 +1,35 @@
+EDIT98 0.7.13 COMPILER VERIFICATION
+==================================
+
+This archive was prepared and statically inspected, but the Windows Free Pascal
+3.2.2 i8086 cross-compiler was not invoked in the preparation environment.
+
+Build in this order:
+
+  BUILD-STORAGETEST-WIN11.BAT
+  BUILD-RTFTEST-WIN11.BAT
+  BUILD-PRINTTEST-WIN11.BAT
+  BUILD-WIN11.BAT
+
+Then test under PC-98 DOS:
+
+  STORAGETEST
+  RTFTEST RTF_SAMPLE.RTF /ALL
+  PRINTTEST
+  EDIT98 RTF_SAMPLE.RTF
+
+Verify:
+
+- STORAGETEST prints "Paged storage check OK."
+- RTFTEST reports [PAGE BREAK] and ASCII * bullets.
+- PRINTTEST prints "Printer automatic page-range check OK."
+- document glyphs match the native menu glyph design;
+- Options > Show Page Breaks hides and restores separators;
+- after exiting and relaunching, EDIT98.CFG restores the chosen setting;
+- very long documents can scroll beyond the three resident cache pages;
+- File > Print offers A4, Letter, Legal, Tabloid, Document Geometry, and four saved custom paper templates;
+- custom paper dimensions and custom margins survive a restart through EDIT98.CFG;
+- File > Print shows a simultaneous From/To range dialog with clickable OK/Cancel;
+- flowing RTF files without explicit page markers report more than one printable
+  page when their wrapped output exceeds one page;
+- File > Print sends all pages and selected ranges to the configured PRN capture.

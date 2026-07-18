@@ -1,0 +1,57 @@
+ File  Edit  Search  Options  Help
++-- RTF_SAMPLE.RTF ----------------------------------------------------------+
+|Native PC-98 text-ROM glyphs are used throughout the entire interface. ^|
+|* Imported RTF bullets are displayed as ordinary ASCII asterisks.       #|
+|------------------------------- Page Break ------------------------------||
+|Long documents are supplied by a three-page disk-backed cache.          ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       ||
+|                                                                       v|
++------------------------------------------------------------------------+
+ Ln 4 Col 1  INS  RTF  F2 Save  F3 Open  Ctrl+P Print  F10 Menu
+
+Options popup:
+
+                    +----------------------------------+
+                    | Tab Width: 4                     |
+                    | Typing Mode: Insert              |
+                    | [X] Auto Indent                  |
+                    | Mouse Speed: Fast                |
+                    | Colors: MS-DOS Edit              |
+                    | [X] Show Page Breaks             |
+                    +----------------------------------+
+
+Changing an item keeps the popup open and immediately writes EDIT98.CFG.
+When Show Page Breaks is off, the marker row is blank but the logical page
+boundary remains in the document and is written back as RTF \\page.
+
+
+File popup:
+
++---------------------------+
+| New                       |
+| Open...          F3       |
+| Save             F2       |
+| Save As...                |
+| Print...      Ctrl+P       |
+| Exit              Esc      |
++---------------------------+
+
+Print first shows All Pages / Page Range plus Top, Bottom, Left, and Right
+margin fields (default 0.5 cm each), with OK and Cancel. Range mode then shows
+both numeric fields together (From [ ] to [ ]) with OK and Cancel. Printable pages use margin-adjusted fixed-pitch automatic pagination plus any
+explicit page-break records, and output
+through the DOS PRN device.
